@@ -30,7 +30,7 @@ img {
 }
 
 p{
-	font-size:13px;
+	font-size:15px;
 	line-height:27px;
 	font-weight:400;
 	padding-bottom:33px;
@@ -103,28 +103,8 @@ h5{
 	display:inline-block;
 	position:relative;
 }
-.aboutme .heading h2:after, .myexperties .heading h2:after, .contactDetails .heading h2:after{
-	content:"";
-	display:block;
-	width:76px;
-	height:2px;
-	background:black;
-	position:absolute;
-	bottom:0;
-	left:50%;
-	margin-left:-38px;
-}
-.skillset .heading h2:after, .educationdiploma .heading h2:after{
-	content:"";
-	display:block;
-	width:76px;
-	height:2px;
-	background:white;
-	position:absolute;
-	bottom:0;
-	left:50%;
-	margin-left:-38px;
-}
+
+
 .heading h3{
 	font-size:18px;
 	line-height:30px;

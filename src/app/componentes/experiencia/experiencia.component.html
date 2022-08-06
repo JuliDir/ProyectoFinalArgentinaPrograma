@@ -1,0 +1,21 @@
+<section id="experience" class="myexperties">
+    <div class="container">
+      <div class="heading">
+      <h2>Experiencias &amp; Proyectos</h2>    
+      <h3></h3>  
+    </div>
+      <div class="row media" *ngFor="let experiencia of experiencias">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" style="text-align: center"> 
+              <img src="{{experiencia.imagenExp}}" alt="">
+              <div class="expertiesico">
+                  {{experiencia.fechaInicioExp}} - {{experiencia.fechaFinExp}}
+              </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <h4>{{experiencia.tituloExp}}</h4>
+              <h5>{{experiencia.nombreExp}}</h5>
+              <p>{{experiencia.descExp}}</p>
+          </div>
+      </div>
+  </div>
+</section>
