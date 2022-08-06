@@ -1,0 +1,73 @@
+.skillset {
+	background:#051723;
+	font-family: 'Roboto'; 
+	width:100%;
+}
+
+.skillset .heading{
+	text-align:center;
+	padding-bottom:30px;
+}
+
+.skillset .container{
+	padding-top:66px ;
+	padding-bottom:64px;
+}
+
+.skillset .heading h2:after{
+    content:"";
+	display:block;
+	width:76px;
+	height:2px;
+	background:white;
+	position:absolute;
+	bottom:0;
+	left:50%;
+	margin-left:-38px;
+}
+
+.skillset .heading h2 {
+    font-family: 'Montserrat', sans-serif;
+	font-size:22px;
+	line-height:40px;
+	font-weight:400;
+	margin-bottom:20px;
+	letter-spacing:2px;
+	display:inline-block;
+	position:relative;
+}
+
+.skillset .heading h3{
+  font-family:'Montserrat', sans-serif;
+	font-size:20px;
+	line-height:30px;
+	color:white;
+	padding-bottom:0;
+	font-weight:300;
+	text-transform:none;
+	letter-spacing:1px;
+}
+
+
+.skillset *, .skillset .heading *, .skillset .heading>h2:after{
+	color: white; 
+}
+
+.skillset .row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skillset .progress{
+    height: 300px;
+	width: 300px;
+    display: grid;
+	place-items: center;
+    transition: 0.3s ease-in-out;
+	background-color: #051723;
+}
+
+
+

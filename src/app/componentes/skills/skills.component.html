@@ -1,0 +1,36 @@
+<section id="skillset" class="skillset">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="heading">
+                <h2>Skills</h2>
+                <h3>Aprendiendo cosas nuevas de a poco</h3>
+            </div>
+            <div class="row">
+                <div class="progress" *ngFor="let skill of skills">
+                    <circle-progress 
+                    [percent]="skill.porcentaje"
+                    [space]="-8"
+                    [radius]="100"
+                    [outerStrokeGradient]="true"
+                    [subtitle]="skill.porcentaje.toString()+'%'"
+                    [title]=skill.nombreSkill
+                    [titleColor]="'white'"
+                    [lazy]="true"
+                    [showInnerStroke]="true"
+                    [innerStrokeColor]="'white'"
+                    [innerStrokeWidth]="2"
+                    [titleFontWeight]="'500'"
+                    [titleFontSize]="'25'"
+                    [subtitleFontSize]="'20'"
+                    [subtitleColor]="'white'"
+                    [outerStrokeWidth]="12"
+                    [outerStrokeColor]="'#d93f3f'"
+                    [animation]="true"
+                    [renderOnClick]="false"
+                    [animationDuration]="2500">
+                    </circle-progress>
+                </div>
+        </div>
+        </div>
+    </div>
+</section>

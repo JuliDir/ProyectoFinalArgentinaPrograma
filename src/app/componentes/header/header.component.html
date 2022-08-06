@@ -1,0 +1,19 @@
+<header>
+    <div class="logo"></div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Acerca de mi</a></li>
+        <li><a href="#">Educacion</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><button type="button" class="btn btn-primary" id="btnLogin">LOGIN</button></li>
+    </ul>
+</header>
+<div class="banner">
+    <div class="banner-content" *ngIf="usuario">
+         <h1>{{usuario.nombre}} {{usuario.apellido}}</h1>
+         <h3>{{usuario.titulo}}</h3>  
+    </div>
+</div> 
+
+

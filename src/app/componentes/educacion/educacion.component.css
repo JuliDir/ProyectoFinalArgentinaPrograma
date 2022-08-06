@@ -1,0 +1,157 @@
+.educationdiploma{
+    background-color: white;
+}
+
+.expertiesico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+	text-align:right;
+	font-family:'Crimson Text',serif;
+	font-size:21px;
+	line-height:24px;
+	font-style:italic;
+}
+
+.row img{
+height: 160px;
+width: 300px;
+}
+
+.expertiesdesc {
+	border-left:2px solid #ada5ad;
+	padding:0 0 0 69px;
+	margin-bottom:100px;
+}
+
+.expertiesdesc p{
+	padding-bottom:41px;
+    font-size:15px;
+	line-height:27px;
+	font-weight:400;
+	margin:0px;
+}
+
+.expertiesdesc h4 {
+	font-size:14px;
+	font-weight:300;
+	color:black;
+	line-height:normal;
+	text-transform:uppercase;
+	letter-spacing:2px;
+}
+.expertiesdesc h5 {
+	font-family: 'Crimson Text', serif;
+	color:#5b4c5c;
+	font-size:18px;
+	font-style:italic;
+	font-weight:400;
+}
+
+.educationdiploma .container{
+	padding-top:65px ;
+	padding-bottom:0 ;
+	margin-bottom:-20px;
+}
+
+.educationdiploma .center{
+	text-align: center;
+}
+
+.educationdiploma .btn-primary {
+	border:2px solid black;
+	background:none;
+	line-height:30px;
+	font-size:12px;
+	color:black;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	font-weight:600;
+	border-radius: 0;
+}
+
+.educationdiploma .btn-primary:hover {
+	border: 2px solid #979497; 
+	color:#979497;
+}
+
+.educationdiploma .heading{
+	text-align:center;
+	padding-bottom:70px;
+}
+
+.educationdiploma .heading .container{
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.educationdiploma .heading h2 {
+	font-size:22px;
+	line-height:40px;
+	font-weight:400;
+	margin-bottom:20px;
+	letter-spacing:2px;
+	display:inline-block;
+	position:relative;
+}
+
+.educationdiploma .heading h2:after{
+	content:"";
+	display:block;
+	width:76px;
+	height:2px;
+	background:black;
+	position:absolute;
+	bottom:0;
+	left:50%;
+	margin-left:-38px;
+}
+
+.educationdiploma .heading h3{
+	font-size:20px;
+	line-height:30px;
+	color:black;
+	padding-bottom:0;
+	font-weight:100;
+	text-transform:none;
+	letter-spacing:1px;
+}
+
+.educationdiploma p{
+	padding-bottom:41px;
+    font-size:15px;
+	line-height:27px;
+	font-weight:400;
+	margin:0px;
+}
+
+.educationdiploma h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size:29px;
+	color:black;
+	line-height:57px;
+	padding-bottom:10px;
+	font-weight:400;
+	text-transform:uppercase;
+	margin:0px;
+}
+
+.educationdiploma h4 {
+    font-family: 'Montserrat', sans-serif;
+	font-size:18px;
+	color:black;
+	padding-bottom:20px;
+}
+
+.educationdiploma h5{
+	font-family: 'Montserrat', sans-serif;
+	font-size:20px;
+	color:black;
+	line-height:24px;
+	padding-bottom:10px;
+	font-weight:400;
+	margin:0px;
+}
