@@ -1,12 +1,11 @@
 <header>
     <div class="logo"></div>
     <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#">Inicio</a></li>
         <li><a href="#">Acerca de mi</a></li>
         <li><a href="#">Educacion</a></li>
         <li><a href="#">Habilidades</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><button type="button" class="btn btn-primary" id="btnLogin">LOGIN</button></li>
+        <li><a type="button" class="btn btn-primary" id="btnLogin" routerLink="/login">LOGIN</a></li>
     </ul>
 </header>
 <div class="banner">
@@ -15,5 +14,10 @@
          <h3>{{usuario.titulo}}</h3>  
     </div>
 </div> 
+<app-aboutme></app-aboutme>
+<app-skills></app-skills>
+<app-educacion></app-educacion>
+<app-experiencia></app-experiencia>
+<app-footer></app-footer>
 
 

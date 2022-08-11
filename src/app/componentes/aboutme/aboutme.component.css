@@ -90,3 +90,9 @@
 	text-transform:none;
 	letter-spacing:1px;
 }
+
+.aboutme .btn{
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', sans-serif;
+}

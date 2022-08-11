@@ -1,7 +1,8 @@
 <section class="myexperties">
     <div class="container">
       <div class="heading">
-      <h2>Experiencias &amp; Proyectos</h2>    
+      <h2>Experiencias &amp; Proyectos</h2> 
+      <br><button type="button" class="btn btn-success" *ngIf="isLogin">AÑADIR EXPERIENCIA</button>     
       <h3></h3>  
     </div>
       <div class="row media" *ngFor="let experiencia of experiencias">
@@ -15,6 +16,10 @@
               <h4>{{experiencia.tituloExp}}</h4>
               <h5>{{experiencia.nombreExp}}</h5>
               <p>{{experiencia.descExp}}</p>
+              <div class="itemEditContainer" *ngIf="isLogin">
+                <a type="button"><i class="fa fa-pencil fa-2x" style="color: #9c9c9c"></i></a>
+                <a type="button"><i class="fa fa-times fa-2x" style="color: #d93f3f"></i></a>
+            </div>
           </div>
       </div>
   </div>

@@ -69,5 +69,15 @@
 	background-color: #051723;
 }
 
+.skillset .btn{
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.itemEditContainer i{
+	padding-right: 10px; 
+}
+
 
 

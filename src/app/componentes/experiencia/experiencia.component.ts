@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/models/experiencia';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
+import { Global } from 'src/app/common/global'
 
 @Component({
   selector: 'app-experiencia',
@@ -10,11 +11,13 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class ExperienciaComponent implements OnInit {
   public experiencias: Experiencia[]=[]; 
+  public isLogin: boolean | undefined; 
 
   constructor(private experienciaService: ExperienciaService) { }
 
   ngOnInit(): void {
     this.getExperiencias(); 
+    this.isLogin = Global.isLogin; 
   }
 
   public getExperiencias():void{

@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 import { HeaderService } from 'src/app/servicios/header.service';
 
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   public usuario: Usuario | undefined; 
   public editUsuario: Usuario | undefined; 
 
-  constructor(private headerService: HeaderService) { }
+  constructor(private headerService: HeaderService, private ruta:Router) { }
 
   ngOnInit(): void {
     navAnimation(); 
@@ -32,6 +33,5 @@ export class HeaderComponent implements OnInit {
     })
   }
 
- 
-
+  
 }

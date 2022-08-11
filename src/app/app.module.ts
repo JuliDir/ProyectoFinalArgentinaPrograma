@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutmeComponent } from './componentes/aboutme/aboutme.component';
@@ -12,6 +12,8 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { InterceptorService } from './servicios/interceptor.service';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
     AboutmeComponent,
     SkillsComponent,
     ExperienciaComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule, 
     NgCircleProgressModule.forRoot({
         "backgroundStrokeWidth": 0,
         "backgroundPadding": 7,
@@ -42,9 +46,6 @@ import { FooterComponent } from './componentes/footer/footer.component';
         "outerStrokeGradientStopColor": "#cd7a7a",
         "innerStrokeColor": "#e7e8ea",
         "innerStrokeWidth": 0,
-        "title": [
-                  ""
-        ],
         "titleFontSize": "15",
         "titleFontWeight": "500",
         "subtitleColor": "#535050",
@@ -54,7 +55,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
         "showUnits": false,
         "clockwise": false})
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

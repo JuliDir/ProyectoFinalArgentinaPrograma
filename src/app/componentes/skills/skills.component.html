@@ -4,6 +4,7 @@
             <div class="heading">
                 <h2>Habilidades</h2>
                 <h3>Aprendiendo cosas nuevas de a poco</h3>
+                <br><button type="button" class="btn btn-success" *ngIf="isLogin">AÑADIR HABILIDAD</button>
             </div>
             <div class="row">
                 <div class="progress" *ngFor="let skill of skills">
@@ -29,6 +30,10 @@
                     [renderOnClick]="false"
                     [animationDuration]="2500">
                     </circle-progress>
+                    <div class="itemEditContainer" *ngIf="isLogin">
+                        <a type="button"><i class="fa fa-pencil fa-2x" style="color: #9c9c9c"></i></a>
+                        <a type="button"><i class="fa fa-times fa-2x" style="color: #d93f3f"></i></a>
+                    </div>
                 </div>
         </div>
         </div>

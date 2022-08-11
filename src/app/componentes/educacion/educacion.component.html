@@ -2,6 +2,7 @@
     <div class="container">
         <div class="heading">
             <h2>Educación &amp; Diplomas</h2>
+            <br><button type="button" class="btn btn-success" *ngIf="isLogin">AÑADIR EDUCACIÓN</button>
         </div>
         <div class="row media" *ngFor="let educacion of educaciones">
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
@@ -14,6 +15,10 @@
                 <h4>{{educacion.tituloEdu}}</h4>
                 <h5>{{educacion.institutoEdu}}</h5>
                 <p>{{educacion.descEdu}}</p>
+                <div class="itemEditContainer" *ngIf="isLogin">
+                    <a type="button"><i class="fa fa-pencil fa-2x" style="color: black"></i></a>
+                    <a type="button"><i class="fa fa-times fa-2x" style="color: red"></i></a>
+                </div>
             </div>
         </div>
       <div class="center"><p><a href="../../../assets/estadoAcademico.pdf" role="button" class="btn btn-primary btn-lg" download="estadoAcademico.pdf">Descargar estado academico</a></p></div>

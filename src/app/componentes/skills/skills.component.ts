@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Skills } from 'src/app/models/skills';
 import { SkillsService } from 'src/app/servicios/skills.service';
+import { Global } from 'src/app/common/global'
 
 declare function skillbarAnimation():any; 
 
@@ -12,11 +13,13 @@ declare function skillbarAnimation():any;
 })
 export class SkillsComponent implements OnInit {
   public skills: Skills[] = [];
+  public isLogin: boolean | undefined; 
 
   constructor(private skillsService:SkillsService) { }
 
   ngOnInit(): void {
     this.getSkills(); 
+    this.isLogin = Global.isLogin; 
   }
 
   public getSkills():void{

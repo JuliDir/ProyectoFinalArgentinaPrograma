@@ -1,5 +1,6 @@
 .educationdiploma{
     background-color: white;
+	padding-bottom: 30px;
 }
 
 .expertiesico {
@@ -20,7 +21,7 @@ width: auto;
 }
 
 .expertiesdesc {
-	border-left:2px solid #ada5ad;
+	border-left:2px solid black;
 	padding:0 0 0 69px;
 	margin-bottom:100px;
 }
@@ -110,14 +111,10 @@ width: auto;
 	margin-left:-38px;
 }
 
-.educationdiploma .heading h3{
-	font-size:20px;
-	line-height:30px;
-	color:black;
-	padding-bottom:0;
-	font-weight:100;
-	text-transform:none;
-	letter-spacing:1px;
+.educationdiploma .btn{
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .educationdiploma p{
@@ -154,4 +151,8 @@ width: auto;
 	padding-bottom:10px;
 	font-weight:400;
 	margin:0px;
+}
+
+.itemEditContainer i{
+	padding-right: 10px; 
 }
