@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 import { HeaderService } from 'src/app/servicios/header.service';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service'
 
  declare function navAnimation(): any; 
 
@@ -14,8 +15,10 @@ import { HeaderService } from 'src/app/servicios/header.service';
 export class HeaderComponent implements OnInit {
   public usuario: Usuario | undefined; 
   public editUsuario: Usuario | undefined; 
+     
 
-  constructor(private headerService: HeaderService, private ruta:Router) { }
+  constructor(private headerService: HeaderService, private ruta:Router, private autenticacionService: AutenticacionService ) { 
+  }
 
   ngOnInit(): void {
     navAnimation(); 
@@ -31,6 +34,16 @@ export class HeaderComponent implements OnInit {
         alert(error.message);
       }
     })
+  }
+
+  onLogout(event: Event){
+    event.preventDefault; 
+    this.autenticacionService.CerrarSesion(); 
+    window.location.reload(); 
+  }
+
+  get isLogin(){
+    return this.autenticacionService.UsuarioAutenticado; 
   }
 
   

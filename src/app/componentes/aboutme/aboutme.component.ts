@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Global } from 'src/app/common/global';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-aboutme',
@@ -7,13 +7,15 @@ import { Global } from 'src/app/common/global';
   styleUrls: ['./aboutme.component.css']
 })
 export class AboutmeComponent implements OnInit {
-  public isLogin:boolean | undefined; 
+  
 
-  constructor() { }
+  constructor(private autenticacionService: AutenticacionService) { }
 
-  ngOnInit(): void {
-    this.isLogin = Global.isLogin; 
+  ngOnInit(): void { 
   }
 
+  get isLogin(){
+    return this.autenticacionService.UsuarioAutenticado; 
+  }
 
 }

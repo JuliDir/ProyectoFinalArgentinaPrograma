@@ -2,8 +2,9 @@
 <form [formGroup]="form" class="m-5" (ngSubmit)="onLogin($event)">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" formControlName="email" 
-        [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" formControlName="email"
+            [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
+            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div *ngIf="Email?.errors && Email?.touched">
             <p *ngIf="Email?.hasError('required')" class="text-danger">
                 El email es requerido.
@@ -16,15 +17,17 @@
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
         <input type="password" formControlName="password"
-        [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}" class="form-control" id="exampleInputPassword1">
+            [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
+            class="form-control" id="exampleInputPassword1">
         <div *ngIf="Password?.errors && Password?.touched">
             <p *ngIf="Password?.hasError('required')" class="text-danger">
                 La contraseña es requerida.
             </p>
             <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
-                La contraseña debe ser de 6 caracteres o más. 
+                La contraseña debe ser de 6 caracteres o más.
             </p>
         </div>
     </div>
-    <button type="submit" class="bnt btn-primary" id="btnLog">Login</button>
+    <button type="submit" class="btn" (submit)="onLogin">Login</button>
+    <button type="button" class="btn" style="margin-left: 10px" (click)="onBack($event)">Volver</button>
 </form>

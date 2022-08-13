@@ -1,11 +1,13 @@
-<header>
+<header id="home">
     <div class="logo"></div>
     <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de mi</a></li>
-        <li><a href="#">Educacion</a></li>
-        <li><a href="#">Habilidades</a></li>
-        <li><a type="button" class="btn btn-primary" id="btnLogin" routerLink="/login">LOGIN</a></li>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#aboutMe">Acerca de mi</a></li>
+        <li><a href="#education">Educacion</a></li>
+        <li><a href="#skillset">Habilidades</a></li>
+        <li><a href="#experties">Experiencias</a></li>
+        <li><a type="button" class="btn btn-primary" id="btnLogin" routerLink="/login" *ngIf="isLogin">LOGIN</a></li>
+        <li><a type="button" class="btn btn-primary" id="btnLogout" *ngIf="!isLogin" (click)="onLogout($event)">LOGOUT</a></li>
     </ul>
 </header>
 <div class="banner">

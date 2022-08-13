@@ -2,7 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/models/educacion';
 import { EducacionService } from 'src/app/servicios/educacion.service';
-import { Global } from 'src/app/common/global';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-educacion',
@@ -11,14 +11,12 @@ import { Global } from 'src/app/common/global';
 })
 export class EducacionComponent implements OnInit {
 
-  public educaciones: Educacion[]=[]; 
-  public isLogin: boolean | undefined; 
+  public educaciones: Educacion[]=[];  
 
-  constructor(private educacionService: EducacionService) { }
+  constructor(private educacionService: EducacionService, private autenticacionService: AutenticacionService) { }
 
   ngOnInit(): void {
-    this.getEducaciones(); 
-    this.isLogin = Global.isLogin; 
+    this.getEducaciones();  
   }
 
   public getEducaciones():void{
@@ -30,6 +28,10 @@ export class EducacionComponent implements OnInit {
         alert(error.message); 
       }
     })
+  }
+
+  get isLogin(){
+    return this.autenticacionService.UsuarioAutenticado; 
   }
 
 }

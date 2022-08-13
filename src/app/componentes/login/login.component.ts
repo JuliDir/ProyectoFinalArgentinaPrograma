@@ -40,5 +40,10 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  onBack(event:Event){
+    event.preventDefault;
+    this.ruta.navigate(['/home']); 
+  }
+
 
 }

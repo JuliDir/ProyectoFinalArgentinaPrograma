@@ -2,7 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/models/experiencia';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
-import { Global } from 'src/app/common/global'
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -10,14 +10,12 @@ import { Global } from 'src/app/common/global'
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  public experiencias: Experiencia[]=[]; 
-  public isLogin: boolean | undefined; 
+  public experiencias: Experiencia[]=[];  
 
-  constructor(private experienciaService: ExperienciaService) { }
+  constructor(private experienciaService: ExperienciaService, private autenticacionService: AutenticacionService) { }
 
   ngOnInit(): void {
     this.getExperiencias(); 
-    this.isLogin = Global.isLogin; 
   }
 
   public getExperiencias():void{
@@ -29,6 +27,10 @@ export class ExperienciaComponent implements OnInit {
         alert(error.message)
       }
     })
+  }
+
+  get isLogin(){
+    return this.autenticacionService.UsuarioAutenticado; 
   }
 
 }

@@ -25,4 +25,9 @@ export class AutenticacionService {
   get UsuarioAutenticado(){
     return this.currentUserSubject.value; 
   }
+
+  CerrarSesion(){
+    sessionStorage.removeItem('currentUser');
+    this.currentUserSubject.next(null); 
+  }
 }
