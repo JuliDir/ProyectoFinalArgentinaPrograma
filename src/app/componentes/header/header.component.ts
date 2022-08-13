@@ -42,8 +42,8 @@ export class HeaderComponent implements OnInit {
     window.location.reload(); 
   }
 
-  get isLogin(){
-    return this.autenticacionService.UsuarioAutenticado; 
+  isLogout(): boolean{
+    return this.autenticacionService.isLogout(); 
   }
 
   

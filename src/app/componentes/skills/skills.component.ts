@@ -31,7 +31,7 @@ export class SkillsComponent implements OnInit {
     })
   }
 
-  get isLogin(){
-    return this.autenticacionService.UsuarioAutenticado; 
+  isLogout(): boolean{
+    return this.autenticacionService.isLogout(); 
   }
 }

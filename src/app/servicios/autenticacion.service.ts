@@ -30,4 +30,8 @@ export class AutenticacionService {
     sessionStorage.removeItem('currentUser');
     this.currentUserSubject.next(null); 
   }
+
+  isLogout(): boolean{
+      return Object.entries(this.UsuarioAutenticado).length === 0; 
+  }
 }

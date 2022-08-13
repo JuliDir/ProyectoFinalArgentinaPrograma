@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
-import { Global } from 'src/app/common/global';
 
 @Component({
   selector: 'app-login',
@@ -35,8 +34,7 @@ export class LoginComponent implements OnInit {
     event.preventDefault;
     this.authService.IniciarSesion(this.form.value).subscribe(data =>{
       console.log("DATA: " + JSON.stringify(data));
-      this.ruta.navigate(['/home']); 
-      Global.isLogin = true; 
+      this.ruta.navigate(['/home']);  
     })
   }
 

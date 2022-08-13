@@ -14,8 +14,8 @@ export class AboutmeComponent implements OnInit {
   ngOnInit(): void { 
   }
 
-  get isLogin(){
-    return this.autenticacionService.UsuarioAutenticado; 
+  isLogout(){
+    return this.autenticacionService.isLogout(); 
   }
 
 }
