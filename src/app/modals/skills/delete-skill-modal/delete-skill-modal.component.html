@@ -1,0 +1,11 @@
+<div class="modal-header bg-primary text-white">
+    <h4 class="modal-title" id="modal-basic-title" style="color: white;">ELIMINAR HABILIDAD</h4>
+</div>
+<div class="modal-body" style="color: black;">
+    <p style="font-size: 17px;">¿Estas seguro que quieres borrar esta habilidad? Los datos serán borrados de forma permanente.</p>
+</div>
+<div class="modal-footer">
+    <button [disabled]="isLoading" class="btn btn-primary mr-2" (click)="modal.close('Cancel')">Cancelar</button>
+    <button [disabled]="isLoading" class="btn btn-danger mr-2" (click)="delete()">Borrar</button>
+</div>
+

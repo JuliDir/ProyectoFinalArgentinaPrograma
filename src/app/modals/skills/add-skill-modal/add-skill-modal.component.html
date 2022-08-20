@@ -1,0 +1,34 @@
+<div class="modal-header bg-primary text-white">
+    <h4 class="modal-title" id="modal-basic-title" style="color: white;">AÑADIR HABILIDAD</h4>
+</div>
+<div class="modal-body" style="color: black;">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="nombreSkill" class="col-form-label col-sm-3 text-right">Nombre Habilidad:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="nombreSkill" class="form-control"
+                [ngClass]="{'is-invalid': nombreSkill?.errors && nombreSkill?.touched, 'is-valid': !nombreSkill?.errors && nombreSkill?.touched}"/>
+                <div *ngIf="nombreSkill?.invalid && (nombreSkill?.dirty || nombreSkill?.touched)"
+                    class="alert-danger">
+                    <span>El nombre es requerido</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="porcentaje" class="col-form-label col-sm-3 text-right">Porcentaje:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="porcentaje" class="form-control" 
+                [ngClass]="{'is-invalid': porcentaje?.errors && porcentaje?.touched, 'is-valid': !porcentaje?.errors && porcentaje?.touched}"/>
+                <div *ngIf="porcentaje?.invalid && (porcentaje?.dirty || porcentaje?.touched)"
+                    class="alert-danger">
+                    <span>El porcentaje es requerido</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button [disabled]="isLoading" class="btn btn-primary mr-2" (click)="modal.close('Cancel')">Cancelar</button>
+            <button [disabled]="isLoading" class="btn btn-primary mr-2">Añadir</button>
+        </div>
+    </form>
+</div>
+

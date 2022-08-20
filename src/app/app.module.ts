@@ -18,6 +18,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddEducacionModalComponent } from './modals/educacion/add-educacion-modal/add-educacion-modal.component';
 import { EditEducacionModalComponent } from './modals/educacion/edit-educacion-modal/edit-educacion-modal.component';
 import { DeleteEducacionModalComponent } from './modals/educacion/delete-educacion-modal/delete-educacion-modal.component';
+import { AddSkillModalComponent } from './modals/skills/add-skill-modal/add-skill-modal.component';
+import { EditSkillModalComponent } from './modals/skills/edit-skill-modal/edit-skill-modal.component';
+import { DeleteSkillModalComponent } from './modals/skills/delete-skill-modal/delete-skill-modal.component';
+import { UsuarioEditModalComponent } from './modals/usuario/usuario-edit-modal/usuario-edit-modal.component';
 
 
 @NgModule({
@@ -33,6 +37,10 @@ import { DeleteEducacionModalComponent } from './modals/educacion/delete-educaci
     AddEducacionModalComponent,
     EditEducacionModalComponent,
     DeleteEducacionModalComponent,
+    AddSkillModalComponent,
+    EditSkillModalComponent,
+    DeleteSkillModalComponent,
+    UsuarioEditModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -46,7 +46,7 @@ export class EducacionComponent implements OnInit {
     ref.result.then((x) =>{
       if(x === 'Yes'){
         console.log('Yes click');
-        window.location.reload(); 
+        this.getEducaciones(); 
       } else if(x === 'Cancel'){
         console.log('Cancel Click')
         ref.componentInstance.onCancel = true; 
@@ -61,7 +61,7 @@ export class EducacionComponent implements OnInit {
     ref.result.then((x) =>{
       if(x === 'Yes'){
         console.log('Yes click');
-        window.location.reload(); 
+        this.getEducaciones(); 
       } else if(x === 'Cancel'){
         console.log('Cancel Click')
         ref.componentInstance.onCancel = true; 
@@ -75,7 +75,7 @@ export class EducacionComponent implements OnInit {
     ref.result.then((x) =>{
       if(x === 'Yes'){
         console.log('Yes click');
-        window.location.reload(); 
+        this.getEducaciones(); 
       } else if(x === 'Cancel'){
         console.log('Cancel Click')
         ref.componentInstance.onCancel = true; 

@@ -1,5 +1,5 @@
 export interface Skills{
-    idSkills:number;
+    idSkill:number;
     porcentaje:number; 
     nombreSkill:string;
 }
