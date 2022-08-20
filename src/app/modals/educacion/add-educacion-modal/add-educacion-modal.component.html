@@ -1,0 +1,78 @@
+<div class="modal-header bg-primary text-white">
+    <h4 class="modal-title" id="modal-basic-title" style="color: white;">AÑADIR EDUCACIÓN</h4>
+</div>
+<div class="modal-body" style="color: black;">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="tituloEdu" class="col-form-label col-sm-3 text-right">Titulo:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="tituloEdu" class="form-control"
+                [ngClass]="{'is-invalid': tituloEdu?.errors && tituloEdu?.touched, 'is-valid': !tituloEdu?.errors && tituloEdu?.touched}"/>
+                <div *ngIf="tituloEdu?.invalid && (tituloEdu?.dirty || tituloEdu?.touched)"
+                    class="alert-danger">
+                    <span>El titulo es requerido</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="descEdu" class="col-form-label col-sm-3 text-right">Descripción:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="descEdu" class="form-control" 
+                [ngClass]="{'is-invalid': descEdu?.errors && descEdu?.touched, 'is-valid': !descEdu?.errors && descEdu?.touched}"/>
+                <div *ngIf="descEdu?.invalid && (descEdu?.dirty || descEdu?.touched)"
+                    class="alert-danger">
+                    <span>La descripción es requerida</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="institutoEdu" class="col-form-label col-sm-3 text-right">Instituto:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="institutoEdu" class="form-control" 
+                [ngClass]="{'is-invalid': institutoEdu?.errors && institutoEdu?.touched, 'is-valid': !institutoEdu?.errors && institutoEdu?.touched}"/>
+                <div *ngIf="institutoEdu?.invalid && (descEdu?.dirty || institutoEdu?.touched)"
+                    class="alert-danger">
+                    <span>El instituto es requerido</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="fechaInicioEdu" class="col-form-label col-sm-3 text-right">Fecha Inicio:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="fechaInicioEdu" class="form-control" name="fecha" 
+                [ngClass]="{'is-invalid': fechaInicioEdu?.errors && fechaInicioEdu?.touched, 'is-valid': !fechaInicioEdu?.errors && fechaInicioEdu?.touched}"/>
+                <div *ngIf="fechaInicioEdu?.invalid && (fechaInicioEdu?.dirty || fechaInicioEdu?.touched)"
+                    class="alert-danger">
+                    <span>Indique una fecha</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="fechaFinEdu" class="col-form-label col-sm-3 text-right">Fecha Fin:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="fechaFinEdu" class="form-control" 
+                [ngClass]="{'is-invalid': fechaFinEdu?.errors && fechaFinEdu?.touched, 'is-valid': !fechaFinEdu?.errors && fechaFinEdu?.touched}"/>
+                <div *ngIf="fechaFinEdu?.invalid && (fechaFinEdu?.dirty || fechaFinEdu?.touched)"
+                    class="alert-danger">
+                    <span>Indique una fecha</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="imagenEdu" class="col-form-label col-sm-3 text-right">URL Imagen:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="imagenEdu" class="form-control" 
+                [ngClass]="{'is-invalid': imagenEdu?.errors && imagenEdu?.touched, 'is-valid': !imagenEdu?.errors && imagenEdu?.touched}"/>
+                <div *ngIf="imagenEdu?.invalid && (imagenEdu?.dirty || imagenEdu?.touched)"
+                    class="alert-danger">
+                    <span>Indique una URL</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button [disabled]="isLoading" class="btn btn-primary mr-2" (click)="modal.close('Cancel')">Cancelar</button>
+            <button [disabled]="isLoading" class="btn btn-primary mr-2">Añadir</button>
+        </div>
+ 
+    </form>
+</div>

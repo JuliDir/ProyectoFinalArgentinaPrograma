@@ -1,0 +1,48 @@
+<div class="modal-header bg-primary text-white">
+    <h4 class="modal-title" id="modal-basic-title" style="color: white;">EDITAR EDUCACIÓN</h4>
+</div>
+<div class="modal-body" style="color: black;">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="tituloEdu" class="col-form-label col-sm-3 text-right">Título:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="tituloEdu" class="form-control" [placeholder]="educacion?.tituloEdu" [ngModel]="educacion?.tituloEdu" />
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="descEdu" class="col-form-label col-sm-3 text-right">Descripción:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="descEdu" class="form-control" [placeholder]="educacion?.descEdu" [ngModel]="educacion?.descEdu"/>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="institutoEdu" class="col-form-label col-sm-3 text-right">Instituto:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="institutoEdu" class="form-control" [placeholder]="educacion?.institutoEdu" [ngModel]="educacion?.institutoEdu"/>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="fechaInicioEdu" class="col-form-label col-sm-3 text-right">Fecha Inicio:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="fechaInicioEdu" class="form-control" name="fecha" [placeholder]="educacion?.fechaInicioEdu" [ngModel]="educacion?.fechaInicioEdu"/>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="fechaFinEdu" class="col-form-label col-sm-3 text-right">Fecha Fin:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="fechaFinEdu" class="form-control" [placeholder]="educacion?.fechaFinEdu" [ngModel]="educacion?.fechaFinEdu"/>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="imagenEdu" class="col-form-label col-sm-3 text-right">URL Imagen:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="imagenEdu" class="form-control" [placeholder]="educacion?.imagenEdu" [ngModel]="educacion?.imagenEdu"/>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button [disabled]="isLoading" class="btn btn-primary mr-2" (click)="modal.close('Cancel')">Cancelar</button>
+            <button [disabled]="isLoading" class="btn btn-primary mr-2">Editar</button>
+        </div>
+ 
+    </form>
+</div>

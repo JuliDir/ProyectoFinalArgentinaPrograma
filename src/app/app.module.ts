@@ -14,6 +14,10 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { FooterComponent } from './componentes/footer/footer.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { InterceptorService } from './servicios/interceptor.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddEducacionModalComponent } from './modals/educacion/add-educacion-modal/add-educacion-modal.component';
+import { EditEducacionModalComponent } from './modals/educacion/edit-educacion-modal/edit-educacion-modal.component';
+import { DeleteEducacionModalComponent } from './modals/educacion/delete-educacion-modal/delete-educacion-modal.component';
 
 
 @NgModule({
@@ -26,6 +30,9 @@ import { InterceptorService } from './servicios/interceptor.service';
     ExperienciaComponent,
     FooterComponent,
     LoginComponent,
+    AddEducacionModalComponent,
+    EditEducacionModalComponent,
+    DeleteEducacionModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,7 @@ import { InterceptorService } from './servicios/interceptor.service';
         "animateTitle": false,
         "animationDuration": 1100,
         "showUnits": false,
-        "clockwise": false})
+        "clockwise": false}), NgbModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],
   bootstrap: [AppComponent]
