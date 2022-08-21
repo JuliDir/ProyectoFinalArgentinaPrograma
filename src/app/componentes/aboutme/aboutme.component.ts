@@ -4,7 +4,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UsuarioEditModalComponent } from 'src/app/modals/usuario/usuario-edit-modal/usuario-edit-modal.component';
 import { Usuario } from 'src/app/models/usuario';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
+import { EventService } from 'src/app/servicios/event.service';
 import { HeaderService } from 'src/app/servicios/header.service';
+
 
 @Component({
   selector: 'app-aboutme',
@@ -14,7 +16,8 @@ import { HeaderService } from 'src/app/servicios/header.service';
 export class AboutmeComponent implements OnInit {
   public usuario:Usuario | undefined;
 
-  constructor(private autenticacionService: AutenticacionService, private headerService:HeaderService, private modal: NgbModal) { }
+  constructor(private autenticacionService: AutenticacionService, private headerService:HeaderService, private modal: NgbModal,
+   private eventService:EventService) { }
 
   ngOnInit(): void { 
     this.getUsuario(); 
@@ -43,6 +46,7 @@ export class AboutmeComponent implements OnInit {
       if(x === 'Yes'){
         console.log('Yes click');
         this.getUsuario(); 
+        this.eventService.emitirEvento(); 
       } else if(x === 'Cancel'){
         console.log('Cancel Click')
         ref.componentInstance.onCancel = true; 

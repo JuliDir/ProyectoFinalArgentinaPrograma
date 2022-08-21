@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 import { HeaderService } from 'src/app/servicios/header.service';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service'
+import { EventService } from 'src/app/servicios/event.service';
 
  declare function navAnimation(): any; 
 
@@ -17,7 +18,11 @@ export class HeaderComponent implements OnInit {
   public editUsuario: Usuario | undefined; 
      
 
-  constructor(private headerService: HeaderService, private ruta:Router, private autenticacionService: AutenticacionService ) { 
+  constructor(private headerService: HeaderService, private ruta:Router, private autenticacionService: AutenticacionService,
+    eventService:EventService) { 
+      eventService.$emitter.subscribe(() => {
+          this.getUsuario(); 
+      }); 
   }
 
   ngOnInit(): void {
