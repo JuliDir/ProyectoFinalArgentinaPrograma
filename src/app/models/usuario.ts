@@ -3,6 +3,7 @@ export interface Usuario{
     nombre:string; 
     apellido:string;
     titulo:string; 
+    subTitulo:string; 
     descripcion:string; 
     fotoPerfil:string; 
 }

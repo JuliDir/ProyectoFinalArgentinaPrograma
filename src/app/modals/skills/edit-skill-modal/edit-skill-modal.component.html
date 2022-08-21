@@ -6,14 +6,14 @@
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
             <label for="nombreSkill" class="col-form-label col-sm-3 text-right">Nombre Habilidad:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="nombreSkill" class="form-control" [ngModel]="skills?.nombreSkill"
+                <input type="text" formControlName="nombreSkill" class="form-control" [placeholder]="skills?.nombreSkill" [ngModel]="skills?.nombreSkill"
                 />
             </div>
         </div>
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
             <label for="porcentaje" class="col-form-label col-sm-3 text-right">Porcentaje:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="porcentaje" class="form-control" [ngModel]="skills?.porcentaje"/>
+                <input type="text" formControlName="porcentaje" class="form-control" [placeholder]="skills?.porcentaje" [ngModel]="skills?.porcentaje"/>
             </div>
         </div>
         <div class="modal-footer">

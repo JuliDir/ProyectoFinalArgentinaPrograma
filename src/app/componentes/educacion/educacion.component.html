@@ -14,7 +14,7 @@
             <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
                 <h4>{{educacion.tituloEdu}}</h4>
                 <h5>{{educacion.institutoEdu}}</h5>
-                <p>{{educacion.descEdu}}</p>
+                <p style="font-size: 16px;">{{educacion.descEdu}}</p>
                 <div class="itemEditContainer" *ngIf="!isLogout()">
                     <a type="button" (click)="editEducacion(educacion)"><i class="fa fa-pencil fa-2x" style="color: black"></i></a>
                     <a type="button" (click)="deleteEducacion(educacion)"><i class="fa fa-times fa-2x" style="color: red"></i></a>

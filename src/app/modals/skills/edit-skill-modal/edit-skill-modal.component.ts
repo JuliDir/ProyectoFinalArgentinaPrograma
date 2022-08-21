@@ -29,20 +29,19 @@ export class EditSkillModalComponent implements OnInit {
   }
  
   onSubmit() {
-    if (this.isLoading || this.onCancel) {
+    if ( this.onCancel || this.isLoading) {
       return;
     }
     this.isLoading = true;
-
-    let sk = this.editForm.value;   
+    let sk = this.editForm.value; 
+    sk.idSkill = this.skills?.idSkill; 
+    console.log(sk); 
 
     this.skillsService.updateSkills(sk).subscribe(x => {
       this.isLoading = false;
       this.modal.close('Yes');
-      console.log(sk)
     },
       error => {
-        alert(error.message)
         this.isLoading = false;
       });
   }

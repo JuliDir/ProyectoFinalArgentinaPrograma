@@ -56,6 +56,7 @@ export class SkillsComponent implements OnInit {
   editSkill(skill: Skills){
     const ref = this.modalService.open(EditSkillModalComponent, {centered: true, size: 'md'}); 
     ref.componentInstance.skills = skill; 
+    console.log(skill);
 
     ref.result.then((x) =>{
       if(x === 'Yes'){

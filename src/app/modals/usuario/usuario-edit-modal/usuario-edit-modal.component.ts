@@ -22,6 +22,7 @@ export class UsuarioEditModalComponent implements OnInit {
       nombre: [this.usuario?.nombre, Validators.required],
       apellido: [this.usuario?.apellido, Validators.required],
       titulo: [this.usuario?.titulo, Validators.required],
+      subTitulo: [this.usuario?.subTitulo, Validators.required],
       descripcion: [this.usuario?.descripcion, Validators.required],
       fotoPerfil: [this.usuario?.fotoPerfil, Validators.required],
     });
