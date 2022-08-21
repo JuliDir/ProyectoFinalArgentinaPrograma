@@ -22,6 +22,9 @@ import { AddSkillModalComponent } from './modals/skills/add-skill-modal/add-skil
 import { EditSkillModalComponent } from './modals/skills/edit-skill-modal/edit-skill-modal.component';
 import { DeleteSkillModalComponent } from './modals/skills/delete-skill-modal/delete-skill-modal.component';
 import { UsuarioEditModalComponent } from './modals/usuario/usuario-edit-modal/usuario-edit-modal.component';
+import { AddExperienciaModalComponent } from './modals/experiencia/add-experiencia-modal/add-experiencia-modal.component';
+import { EditExperienciaModalComponent } from './modals/experiencia/edit-experiencia-modal/edit-experiencia-modal.component';
+import { DeleteExperienciaModalComponent } from './modals/experiencia/delete-experiencia-modal/delete-experiencia-modal.component';
 
 
 @NgModule({
@@ -41,6 +44,9 @@ import { UsuarioEditModalComponent } from './modals/usuario/usuario-edit-modal/u
     EditSkillModalComponent,
     DeleteSkillModalComponent,
     UsuarioEditModalComponent,
+    AddExperienciaModalComponent,
+    EditExperienciaModalComponent,
+    DeleteExperienciaModalComponent,
   ],
   imports: [
     BrowserModule,

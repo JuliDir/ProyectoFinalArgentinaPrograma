@@ -155,3 +155,12 @@ width: 220px;
 .itemEditContainer i{
 	padding-right: 10px; 
 }
+
+.fa-2x{
+	transition: .5s;
+}
+
+.fa-2x:hover{
+	font-size: 2.3em;
+	transition: .5s;
+}

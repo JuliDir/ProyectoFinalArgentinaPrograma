@@ -1,0 +1,79 @@
+<div class="modal-header bg-primary text-white">
+    <h4 class="modal-title" id="modal-basic-title" style="color: white;">AÑADIR EXPERIENCIA</h4>
+</div>
+<div class="modal-body" style="color: black;">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="tituloExp" class="col-form-label col-sm-3 text-right">Titulo:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="tituloExp" class="form-control"
+                [ngClass]="{'is-invalid': tituloExp?.errors && tituloExp?.touched, 'is-valid': !tituloExp?.errors && tituloExp?.touched}"/>
+                <div *ngIf="tituloExp?.invalid && (tituloExp?.dirty || tituloExp?.touched)"
+                    class="alert-danger">
+                    <span>El titulo es requerido</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="descExp" class="col-form-label col-sm-3 text-right">Descripción:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="descExp" class="form-control" 
+                [ngClass]="{'is-invalid': descExp?.errors && descExp?.touched, 'is-valid': !descExp?.errors && descExp?.touched}"/>
+                <div *ngIf="descExp?.invalid && (descExp?.dirty || descExp?.touched)"
+                    class="alert-danger">
+                    <span>La descripción es requerida</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="nombreExp" class="col-form-label col-sm-3 text-right">Nombre:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="nombreExp" class="form-control" 
+                [ngClass]="{'is-invalid': nombreExp?.errors && nombreExp?.touched, 'is-valid': !nombreExp?.errors && nombreExp?.touched}"/>
+                <div *ngIf="nombreExp?.invalid && (nombreExp?.dirty || nombreExp?.touched)"
+                    class="alert-danger">
+                    <span>El nombre es requerido</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="fechaInicioExp" class="col-form-label col-sm-3 text-right">Fecha Inicio:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="fechaInicioExp" class="form-control" name="fecha" 
+                [ngClass]="{'is-invalid': fechaInicioExp?.errors && fechaInicioExp?.touched, 'is-valid': !fechaInicioExp?.errors && fechaInicioExp?.touched}"/>
+                <div *ngIf="fechaInicioExp?.invalid && (fechaInicioExp?.dirty || fechaInicioExp?.touched)"
+                    class="alert-danger">
+                    <span>Indique una fecha</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="fechaFinExp" class="col-form-label col-sm-3 text-right">Fecha Fin:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="fechaFinExp" class="form-control" 
+                [ngClass]="{'is-invalid': fechaFinExp?.errors && fechaFinExp?.touched, 'is-valid': !fechaFinExp?.errors && fechaFinExp?.touched}"/>
+                <div *ngIf="fechaFinExp?.invalid && (fechaFinExp?.dirty || fechaFinExp?.touched)"
+                    class="alert-danger">
+                    <span>Indique una fecha</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
+            <label for="imagenExp" class="col-form-label col-sm-3 text-right">URL Imagen:</label>
+            <div class="col-sm-7">
+                <input type="text" formControlName="imagenExp" class="form-control" 
+                [ngClass]="{'is-invalid': imagenExp?.errors && imagenExp?.touched, 'is-valid': !imagenExp?.errors && imagenExp?.touched}"/>
+                <div *ngIf="imagenExp?.invalid && (imagenExp?.dirty || imagenExp?.touched)"
+                    class="alert-danger">
+                    <span>Indique una URL</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button [disabled]="isLoading" class="btn btn-primary mr-2" (click)="modal.close('Cancel')">Cancelar</button>
+            <button [disabled]="isLoading" class="btn btn-primary mr-2">Añadir</button>
+        </div>
+ 
+    </form>
+</div>
+

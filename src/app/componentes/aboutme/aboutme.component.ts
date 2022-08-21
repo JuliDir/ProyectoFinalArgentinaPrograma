@@ -49,4 +49,5 @@ export class AboutmeComponent implements OnInit {
       }
   });
   }
+  
 }
