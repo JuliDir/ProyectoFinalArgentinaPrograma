@@ -12,7 +12,8 @@
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
             <label for="descExp" class="col-form-label col-sm-3 text-right">Descripción:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="descExp" class="form-control" [placeholder]="experiencia?.descExp" [ngModel]="experiencia?.descExp"/>
+                <textarea type="text" formControlName="descExp" class="form-control" [placeholder]="experiencia?.descExp" [ngModel]="experiencia?.descExp"
+                style="height: 200px;"></textarea>
             </div>
         </div>
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
@@ -22,21 +23,36 @@
             </div>
         </div>
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
-            <label for="fechaInicioExp" class="col-form-label col-sm-3 text-right">Fecha Inicio:</label>
+            <label for="fechaInicioExp" class="col-form-label col-sm-3 text-right">Año Inicio:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="fechaInicioExp" class="form-control" name="fecha" [placeholder]="experiencia?.fechaInicioExp" [ngModel]="experiencia?.fechaInicioExp"/>
+                <input type="text" formControlName="fechaInicioExp" class="form-control" name="fecha" [placeholder]="experiencia?.fechaInicioExp" [ngModel]="experiencia?.fechaInicioExp"
+                [ngClass]="{'is-invalid': fechaInicioExp?.errors && fechaInicioExp?.touched}"/>
+                <div *ngIf="fechaInicioExp?.invalid && (fechaInicioExp?.dirty || fechaInicioExp?.touched)"
+                    class="alert-danger">
+                    <span>Indique un año válido</span>
+                </div>
             </div>
         </div>
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
-            <label for="fechaFinExp" class="col-form-label col-sm-3 text-right">Fecha Fin:</label>
+            <label for="fechaFinExp" class="col-form-label col-sm-3 text-right">Año Fin:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="fechaFinExp" class="form-control" [placeholder]="experiencia?.fechaFinExp" [ngModel]="experiencia?.fechaFinExp"/>
+                <input type="text" formControlName="fechaFinExp" class="form-control" [placeholder]="experiencia?.fechaFinExp" [ngModel]="experiencia?.fechaFinExp"
+                [ngClass]="{'is-invalid': fechaFinExp?.errors && fechaFinExp?.touched}"/>
+                <div *ngIf="fechaFinExp?.invalid && (fechaFinExp?.dirty || fechaFinExp?.touched)"
+                    class="alert-danger">
+                    <span>Indique un año válido</span>
+                </div>
             </div>
         </div>
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
             <label for="imagenExp" class="col-form-label col-sm-3 text-right">URL Imagen:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="imagenExp" class="form-control" [placeholder]="experiencia?.imagenExp" [ngModel]="experiencia?.imagenExp"/>
+                <input type="text" formControlName="imagenExp" class="form-control" [placeholder]="experiencia?.imagenExp" [ngModel]="experiencia?.imagenExp"
+                [ngClass]="{'is-invalid': imagenExp?.errors && imagenExp?.touched}"/>
+                <div *ngIf="imagenExp?.invalid && (imagenExp?.dirty || imagenExp?.touched)"
+                    class="alert-danger">
+                    <span>Indique una URL válida</span>
+                </div>
             </div>
         </div>
         <div class="modal-footer">

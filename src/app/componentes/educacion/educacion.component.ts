@@ -2,7 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Educacion } from 'src/app/models/educacion';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddEducacionModalComponent } from 'src/app/modals/educacion/add-educacion-modal/add-educacion-modal.component';
 import { EditEducacionModalComponent } from 'src/app/modals/educacion/edit-educacion-modal/edit-educacion-modal.component';

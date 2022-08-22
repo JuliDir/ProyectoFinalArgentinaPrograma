@@ -30,13 +30,19 @@
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
             <label for="descripcion" class="col-form-label col-sm-3 text-right">Descripción:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="descripcion" class="form-control" name="fecha" [ngModel]="usuario?.descripcion"/>
+                <textarea type="text" formControlName="descripcion" class="form-control" name="fecha" [ngModel]="usuario?.descripcion"
+                style="height: 200px;"></textarea> 
             </div>
         </div>
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
             <label for="fotoPerfil" class="col-form-label col-sm-3 text-right">URL Imagen:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="fotoPerfil" class="form-control" [ngModel]="usuario?.fotoPerfil"/>
+                <input type="text" formControlName="fotoPerfil" class="form-control" [ngModel]="usuario?.fotoPerfil"
+                [ngClass]="{'is-invalid': fotoPerfil?.errors && fotoPerfil?.touched}"/>
+                <div *ngIf="fotoPerfil?.invalid && (fotoPerfil?.dirty || fotoPerfil?.touched)"
+                    class="alert-danger">
+                    <span>Indique una URL válida</span>
+                </div>
             </div>
         </div>
         <div class="modal-footer">

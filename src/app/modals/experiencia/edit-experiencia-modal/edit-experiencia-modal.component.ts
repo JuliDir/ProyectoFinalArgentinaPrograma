@@ -22,9 +22,9 @@ export class EditExperienciaModalComponent implements OnInit {
       idExp: [this.experiencia?.idExp],
       nombreExp: [this.experiencia?.nombreExp, Validators.required],
       tituloExp: [this.experiencia?.tituloExp, Validators.required],
-      fechaInicioExp: [this.experiencia?.fechaInicioExp, Validators.required],
-      fechaFinExp: [this.experiencia?.fechaFinExp, Validators.required],
-      imagenExp: [this.experiencia?.imagenExp, Validators.required],
+      fechaInicioExp: [this.experiencia?.fechaInicioExp, [Validators.required, Validators.pattern("[0-9]{4}")]],
+      fechaFinExp: [this.experiencia?.fechaFinExp, [Validators.required, Validators.pattern("[0-9]{4}")]],
+      imagenExp: [this.experiencia?.imagenExp, [Validators.required, Validators.pattern(/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/)]],
       descExp: [this.experiencia?.descExp, Validators.required]
     });
    }

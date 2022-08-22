@@ -22,9 +22,9 @@ export class AddEducacionModalComponent implements OnInit {
       idEdu: [this.educacion?.idEdu],
       tituloEdu: [this.educacion?.tituloEdu, Validators.required],
       descEdu: [this.educacion?.descEdu, Validators.required],
-      fechaInicioEdu: [this.educacion?.fechaInicioEdu, Validators.required],
-      fechaFinEdu: [this.educacion?.fechaFinEdu, Validators.required],
-      imagenEdu: [this.educacion?.imagenEdu, Validators.required],
+      fechaInicioEdu: [this.educacion?.fechaInicioEdu, [Validators.required, Validators.pattern("[0-9]{4}")]],
+      fechaFinEdu: [this.educacion?.fechaFinEdu, [Validators.required, Validators.pattern("[0-9]{4}")]],
+      imagenEdu: [this.educacion?.imagenEdu, [Validators.required, Validators.pattern(/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/)]],
       institutoEdu: [this.educacion?.institutoEdu, Validators.required]
     });
    }

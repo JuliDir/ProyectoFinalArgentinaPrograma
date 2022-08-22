@@ -32,9 +32,14 @@ export class LoginComponent implements OnInit {
 
   onLogin(event:Event){
     event.preventDefault;
-    this.authService.IniciarSesion(this.form.value).subscribe(data =>{
-      console.log("DATA: " + JSON.stringify(data));
-      this.ruta.navigate(['/home']);  
+    this.authService.IniciarSesion(this.form.value).subscribe({  
+      next: () =>{
+        this.ruta.navigate(['/home']);
+      },
+      error: () =>{
+        alert("La contraseña o el email son incorrectos");
+        this.form.reset(); 
+      }
     })
   }
 

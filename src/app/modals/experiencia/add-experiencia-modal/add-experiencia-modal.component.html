@@ -17,8 +17,8 @@
         <div class="form-group row d-flex align-items-center" style="gap: 30px; margin-bottom: 15px;">
             <label for="descExp" class="col-form-label col-sm-3 text-right">Descripción:</label>
             <div class="col-sm-7">
-                <input type="text" formControlName="descExp" class="form-control" 
-                [ngClass]="{'is-invalid': descExp?.errors && descExp?.touched, 'is-valid': !descExp?.errors && descExp?.touched}"/>
+                <textarea type="text" formControlName="descExp" class="form-control" style="height: 200px;"
+                [ngClass]="{'is-invalid': descExp?.errors && descExp?.touched, 'is-valid': !descExp?.errors && descExp?.touched}"></textarea>
                 <div *ngIf="descExp?.invalid && (descExp?.dirty || descExp?.touched)"
                     class="alert-danger">
                     <span>La descripción es requerida</span>
@@ -43,7 +43,7 @@
                 [ngClass]="{'is-invalid': fechaInicioExp?.errors && fechaInicioExp?.touched, 'is-valid': !fechaInicioExp?.errors && fechaInicioExp?.touched}"/>
                 <div *ngIf="fechaInicioExp?.invalid && (fechaInicioExp?.dirty || fechaInicioExp?.touched)"
                     class="alert-danger">
-                    <span>Indique una fecha</span>
+                    <span>Indique un año válido</span>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                 [ngClass]="{'is-invalid': fechaFinExp?.errors && fechaFinExp?.touched, 'is-valid': !fechaFinExp?.errors && fechaFinExp?.touched}"/>
                 <div *ngIf="fechaFinExp?.invalid && (fechaFinExp?.dirty || fechaFinExp?.touched)"
                     class="alert-danger">
-                    <span>Indique una fecha</span>
+                    <span>Indique un año válido</span>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
                 [ngClass]="{'is-invalid': imagenExp?.errors && imagenExp?.touched, 'is-valid': !imagenExp?.errors && imagenExp?.touched}"/>
                 <div *ngIf="imagenExp?.invalid && (imagenExp?.dirty || imagenExp?.touched)"
                     class="alert-danger">
-                    <span>Indique una URL</span>
+                    <span>Indique una URL válida</span>
                 </div>
             </div>
         </div>
